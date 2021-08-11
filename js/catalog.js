@@ -3,14 +3,14 @@
 'use strict';
 let counterNum=0;
 // Set up an empty cart for use on this page.
-const cart = new Cart([]);
+let cart = new Cart([]);
 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
-  const selectElement = document.getElementById('items');
+  let selectElement = document.getElementById('items');
   for (let i in Product.allProducts) {
       let itemoption=document.createElement('option');
       itemoption.textContent=Product.allProducts[i].name;
@@ -68,14 +68,14 @@ function updateCartPreview() {
 
   let listItem=document.createElement('li');
 
-  cartContents.appendChild('listItem');
+  cartContents.appendChild(listItem);
   listItem.textContent=`you pick ${ CartItem.Product} and your quantity ${CartItem.quantity}`;
 }
 
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
-const catalogForm = document.getElementById('catalog');
+let catalogForm = document.getElementById('catalog');
 catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select
