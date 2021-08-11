@@ -12,10 +12,10 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
   for (let i in Product.allProducts) {
-      let itemoption=document.createElement('option');
-      itemoption.textContent=Product.allProducts[i].name;
-      selectElement.appendChild(itemoption);
-     
+    let itemoption=document.createElement('option');
+    itemoption.textContent=Product.allProducts[i].name;
+    selectElement.appendChild(itemoption);
+
   }
 
 }
@@ -25,7 +25,7 @@ function populateForm() {
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
   // TODO: Prevent the page from reloading
-event.preventDefault();
+  event.preventDefault();
   // Do all the things ...
   CartItem.Product=event.target.items.value;
   console.log(CartItem.Product);
@@ -54,8 +54,8 @@ let counter;
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
-   counter=document.getElementById('itemCount');
-   counter.textContent=counterNum;
+  counter=document.getElementById('itemCount');
+  counter.textContent=counterNum;
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart
@@ -68,7 +68,7 @@ function updateCartPreview() {
 
   let listItem=document.createElement('li');
 
-  cartContents.appendChild('listItem');
+  cartContents.appendChild(listItem);
   listItem.textContent=`you pick ${ CartItem.Product} and your quantity ${CartItem.quantity}`;
 }
 
