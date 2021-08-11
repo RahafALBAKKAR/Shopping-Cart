@@ -1,7 +1,8 @@
 /* global Cart */
 'use strict';
 
-// Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
+// Create an event listener so that when the delete link is clicked, the 
+// removeItemFromCart method is invoked.
 const table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 let cart;
